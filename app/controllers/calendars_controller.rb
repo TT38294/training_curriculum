@@ -2,7 +2,23 @@ class CalendarsController < ApplicationController
 
   # １週間のカレンダーと予定が表示されるページ
   def index
+<<<<<<< HEAD
     getWeek
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    getWeek
+=======
+    get_eek
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
+=======
+    get_week
+>>>>>>> Stashed changes
+=======
+    get_eek
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
+>>>>>>> f23c3bc333f7b07f6fc9378d39141f1b14ecb614
     @plan = Plan.new
   end
 
@@ -34,6 +50,7 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
+<<<<<<< HEAD
 
       wday_num = Date.today.wday + x
       if wday_num >= 7
@@ -41,6 +58,29 @@ class CalendarsController < ApplicationController
       end
       
       days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num] 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
+
+      wday_num = Date.today.wday + x
+      if wday_num >= 7
+        wday_num = wday_num -7
+      end
+<<<<<<< HEAD
+<<<<<<< HEAD
+      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num] }
+=======
+=======
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
+
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
+=======
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans,wday}
+>>>>>>> Stashed changes
+>>>>>>> f23c3bc333f7b07f6fc9378d39141f1b14ecb614
       @week_days.push(days)
     end
   end
