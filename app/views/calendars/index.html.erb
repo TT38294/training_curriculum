@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 <div>
@@ -11,6 +12,8 @@
 =======
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
 <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
   <%= f.label :日付を選択, class: 'lavel' %>
   <%= f.date_field :date, class: 'date-select' %>
@@ -23,6 +26,7 @@
   <% @week_days.each do |day| %>
     <div class='item'>
       <div class='date'>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         <% day[:month] %>/<% day[:date] %>
       </div>
@@ -54,6 +58,9 @@
 =======
         <%= day[:month] %>/<%= day[:date] %><%=wday%>
 >>>>>>> Stashed changes
+=======
+        <% day[:month] %>/<% day[:date] %>
+>>>>>>> 06ffa9f08e2aebc4f5a6b1e6c1df2bcf53e54bf4
       </div>
       <ul class='content'>
       <% if day[:plans].length != 0 %>
